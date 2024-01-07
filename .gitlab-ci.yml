@@ -20,7 +20,7 @@ loading-tests-local:
   image:
     name: grafana/k6:latest
     entrypoint: ['']
-  stage: loadtest-local
+  stage: loading-tests-local
   script:
     - echo "executing local k6 in k6 container..."
-    - k6 run ./loadtests/performance-test.js
+    - k6 run dist/get-200-status-test.js

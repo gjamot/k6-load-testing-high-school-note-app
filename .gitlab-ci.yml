@@ -23,4 +23,5 @@ loading-tests-local:
   stage: loading-tests-local
   script:
     - echo "executing local k6 in k6 container..."
+    - npm start
     - k6 run dist/get-200-status-test.js
